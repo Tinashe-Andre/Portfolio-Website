@@ -1572,6 +1572,13 @@ p {
         grid-column: span 1;
     }
     
+    .flipbook-container {
+        max-width: 95%;
+        margin: var(--spacing-lg) auto;
+        border-width: 2px;
+        border-radius: var(--radius-md);
+    }
+    
     .case-study-body {
         grid-template-columns: 1fr;
     }
@@ -1650,6 +1657,13 @@ p {
     
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .flipbook-container {
+        max-width: 98%;
+        margin: var(--spacing-md) auto;
+        border-width: 1px;
+        border-radius: var(--radius-sm);
     }
 }
 
