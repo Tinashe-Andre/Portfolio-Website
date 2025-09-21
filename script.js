@@ -78,17 +78,18 @@ function initTypingAnimation() {
     }
 }
 
-// Scroll animations
+// Scroll animations - Optimized
 function initScrollAnimations() {
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -20px 0px'
     };
     
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing once animated
             }
         });
     }, observerOptions);
@@ -97,11 +98,11 @@ function initScrollAnimations() {
     const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
     animatedElements.forEach(el => observer.observe(el));
     
-    // Add animation classes to elements
+    // Add animation classes to elements with reduced delay
     const elementsToAnimate = document.querySelectorAll('.skill-card, .project-card, .value-item, .fact-item');
     elementsToAnimate.forEach((el, index) => {
         el.classList.add('fade-in');
-        el.style.animationDelay = `${index * 0.1}s`;
+        el.style.animationDelay = `${index * 0.05}s`; // Reduced delay
     });
 }
 
@@ -308,19 +309,21 @@ function initSmoothScrolling() {
     });
 }
 
-// Parallax effects
+// Parallax effects - Optimized with throttling
 function initParallaxEffects() {
     const parallaxElements = document.querySelectorAll('.floating-card');
     
-    window.addEventListener('scroll', function() {
+    const updateParallax = throttle(function() {
         const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
+        const rate = scrolled * -0.3; // Reduced intensity
         
         parallaxElements.forEach((element, index) => {
-            const speed = 0.5 + (index * 0.1);
+            const speed = 0.3 + (index * 0.05); // Reduced speed
             element.style.transform = `translateY(${rate * speed}px)`;
         });
-    });
+    }, 16); // 60fps
+    
+    window.addEventListener('scroll', updateParallax);
 }
 
 // Loading states
