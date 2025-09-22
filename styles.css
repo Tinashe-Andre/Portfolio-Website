@@ -1718,9 +1718,9 @@ p {
     animation: spin 1s ease-in-out infinite;
 }
 
-@keyframes spin {
+/*@keyframes spin {
     to { transform: rotate(360deg); }
-}
+}*/ /* Commented out to reduce unnecessary animations */
 
 /* Utility Classes */
 .text-center { text-align: center; }
