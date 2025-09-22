@@ -317,10 +317,12 @@ p {
     font-weight: 500;
     margin-bottom: var(--spacing-md);
     border: 1px solid rgba(255, 107, 53, 0.2);
+    margin-top: 0;
 }
 
 .hero-title {
     margin-bottom: var(--spacing-md);
+    margin-top: 0;
 }
 
 .highlight {
@@ -1530,7 +1532,13 @@ p {
     .hamburger {
         display: flex;
     }
-    
+
+      .navbar,
+    .nav-container {
+        height: 80px !important;
+        min-height: 80px !important;
+    }
+
     .nav-menu {
         position: fixed;
         top: 80px;
@@ -1553,6 +1561,10 @@ p {
     .nav-menu .nav-link {
         font-size: 1.2rem;
         margin-bottom: var(--spacing-md);
+    }
+
+     .hero {
+        padding-top: 100px !important;
     }
     
     .hero-container {
@@ -1635,7 +1647,11 @@ p {
     .container {
         padding: 0 var(--spacing-sm);
     }
-    
+
+     .hero {
+        padding-top: 100px; /* match or slightly exceed navbar height */
+    }
+
     .hero-container {
         padding: 0 var(--spacing-sm);
     }
