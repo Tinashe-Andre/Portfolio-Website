@@ -1190,12 +1190,28 @@ p {
     box-shadow: var(--shadow-lg);
 }
 
-.fact-number {
+.fact-number, .fact-date {
     font-family: var(--font-heading);
     font-size: 3rem;
     font-weight: 700;
     color: var(--accent-color);
     margin-bottom: var(--spacing-sm);
+}
+
+.fact-plus {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    vertical-align: super;
+    margin-left: 0.1em;
+}
+
+.num-and-plus {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 4px;
 }
 
 .fact-label {
