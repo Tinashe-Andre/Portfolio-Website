@@ -88,7 +88,7 @@ function initScrollAnimations() {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target.classList.add('is-visible');
                 observer.unobserve(entry.target); // Stop observing once animated
             }
         });
@@ -309,7 +309,7 @@ function initSmoothScrolling() {
     });
 }
 
-// Parallax effects - Optimized with throttling
+// Parallax effects - Optimized
 function initParallaxEffects() {
     const parallaxElements = document.querySelectorAll('.floating-card');
     

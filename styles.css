@@ -183,7 +183,7 @@ p {
 }
 
 .nav-logo img {
-    height: 150px;
+    height: 40px;
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -471,6 +471,7 @@ p {
 }
 
 /* Featured Projects */
+
 .featured-projects {
     padding: var(--spacing-xxl) 0;
     background: var(--background-light);
@@ -1661,35 +1662,15 @@ p {
 }
 
 /* Animation Classes - Optimized for Performance */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
-}
-
-.fade-in.visible {
+.fade-in.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
-
-.slide-in-left {
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: all 0.3s ease;
-}
-
-.slide-in-left.visible {
+.slide-in-left.is-visible {
     opacity: 1;
     transform: translateX(0);
 }
-
-.slide-in-right {
-    opacity: 0;
-    transform: translateX(30px);
-    transition: all 0.3s ease;
-}
-
-.slide-in-right.visible {
+.slide-in-right.is-visible {
     opacity: 1;
     transform: translateX(0);
 }
