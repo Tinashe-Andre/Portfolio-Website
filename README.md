@@ -186,4 +186,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Built with ❤️ by Tinashe Andre**
 
-_Last updated: January 2025_
+_Last updated: September 2025_
