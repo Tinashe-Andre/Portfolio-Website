@@ -47,15 +47,15 @@ Portfolio-Website/
 ├── contact.html            # Contact page
 ├── styles.css              # Main stylesheet
 ├── script.js               # JavaScript functionality
-├── image/                  # Image assets
-│   ├── tdreNoBG.png       # Logo
-│   └── Proffessional Headshot.jpg  # Profile photo
+├── images/                  # Image assets
+│   ├── tdre-no-bg.png       # Logo
+│   └── proffessional-headshot.png  # Profile photo
 ├── images/                 # Project images
-│   ├── psquared-project.jpg
-│   ├── boomerang-project.jpg
-│   └── noxcool-project.jpg
+│   ├── psquared-project.png
+│   ├── boomerang-project.png
+│   └── noxcool-project.png
 ├── files/                  # PDF files and documents
-│   └── Andre CV.pdf       # Resume/CV
+│   └── Resume.pdf       # Resume/CV
 └── README.md              # This file
 ```
 
