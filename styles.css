@@ -750,6 +750,17 @@ p {
     margin-bottom: var(--spacing-sm);
 }
 
+.num-plus, .num-percent {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 4px;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
 .stat-label {
     font-size: 1.1rem;
     font-weight: 500;
