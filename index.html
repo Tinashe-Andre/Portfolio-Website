@@ -1,322 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tinashe Andre | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="images/tdre-logo.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tinashe Andre | Web Developer & Network Engineer</title>
+  <meta name="description" content="Full-stack web developer, CCNA-certified network engineer, and UI/UX designer based in South Africa. Building digital experiences that convert.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/tdre-logo.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html"><img src="images/tdre-no-bg.png" alt="T.Dre Logo"></a>
-            </div>
-            <div class="nav-menu" id="navMenu">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="case-studies.html" class="nav-link">Case Studies</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <a href="files/Resume.pdf" class="nav-cta" target="_blank">Resume</a>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="index.html"><img src="images/tdre-no-bg.png" alt="T.Dre Logo"></a>
+      </div>
+      <div class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="case-studies.html" class="nav-link">Work</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle">Expertise <i class="fas fa-chevron-down"></i></button>
+          <div class="nav-dropdown-menu">
+            <a href="networking.html"><i class="fas fa-network-wired"></i> Networking</a>
+            <a href="cloud.html"><i class="fas fa-cloud"></i> Cloud</a>
+            <a href="about.html"><i class="fas fa-code"></i> Dev Skills</a>
+          </div>
         </div>
-    </nav>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="quote.html" class="nav-cta"><i class="fas fa-file-invoice-dollar"></i> Get a Quote</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span>Available for work</span>
-                </div>
-                <h1 class="hero-title">
-                    I'm <span class="highlight">Tinashe Andre</span><br>
-                    <span class="typing-text" id="typing"></span>
-                </h1>
-                <p class="hero-description">
-                    A passionate developer crafting digital experiences that blend creativity with functionality. 
-                    I specialize in building modern web applications and creating compelling visual designs.
-                </p>
-                <div class="hero-actions">
-                    <a href="case-studies.html" class="btn-primary">View My Work</a>
-                    <a href="contact.html" class="btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-container">
-                    <img src="images/professional-headshot.jpg" alt="Tinashe Andre" class="profile-img">
-                    <div class="floating-elements">
-                        <div class="floating-card card-1">
-                            <i class="fas fa-code"></i>
-                            <span>Web Dev</span>
-                        </div>
-                        <div class="floating-card card-2">
-                            <i class="fas fa-palette"></i>
-                            <span>Design</span>
-                        </div>
-                        <div class="floating-card card-3">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>Mobile</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- HERO -->
+  <section class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">Available for new projects</div>
+        <h1 class="hero-title">
+          I'm <span class="highlight">Tinashe Andre</span><br>
+          <span class="typing-text" id="typing"></span>
+        </h1>
+        <p class="hero-description">
+          Full-stack web developer, CCNA-certified network engineer, and UI/UX designer.
+          I build digital products that look great, load fast, and grow businesses.
+        </p>
+        <div class="hero-actions">
+          <a href="quote.html" class="btn-primary"><i class="fas fa-file-invoice-dollar"></i> Request a Quote</a>
+          <a href="case-studies.html" class="btn-secondary"><i class="fas fa-briefcase"></i> View My Work</a>
         </div>
-    </section>
-
-    <!-- Featured Projects -->
-    <section class="featured-projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Featured Work</span>
-                <h2>Selected Projects 2023-2025</h2>
-                <p>Showcasing my best work in web development and design</p>
+        <div class="hero-certs">
+          <div class="cert-badge ccna">
+            <span class="cert-icon"><i class="fas fa-network-wired"></i></span>
+            <div>
+              <div style="font-size:13px;font-weight:700;">Cisco CCNA</div>
+              <div style="font-size:11px;color:var(--text-3);">Certified Apr 2025</div>
             </div>
-            <div class="projects-grid">
-                <div class="project-card featured">
-                    <div class="project-image">
-                        <img src="images/psquared-project.png" alt="P Squared Cleaning Services">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://psquaredtotalcare.co.za/" target="_blank" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    Live Site
-                                </a>
-                                <a href="https://github.com/Tinashe-Andre/P-Squared-Website" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>P Squared Cleaning Services</h3>
-                        <p>A modern website for a cleaning company featuring responsive design and contact forms.</p>
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/boomerang-project.png" alt="Boomerang Driving School">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://boomerangdrivingschool.co.za/" target="_blank" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    Live Site
-                                </a>
-                                <a href="https://github.com/Tinashe-Andre/Boomerang-Website" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Boomerang Driving School</h3>
-                        <p>Interactive website with lesson booking system and modern UI design.</p>
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/noxcool-project.png" alt="Noxcool Air Conditioning">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://noxcool-website.vercel.app/" target="_blank" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    Live Site
-                                </a>
-                                <a href="https://github.com/Tinashe-Andre/New-Villians-Web" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Noxcool Air Conditioning</h3>
-                        <p>Professional business website with modern design and service showcase.</p>
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="cert-badge azure">
+            <span class="cert-icon"><i class="fab fa-microsoft"></i></span>
+            <div>
+              <div style="font-size:13px;font-weight:700;">AZ-900</div>
+              <div style="font-size:11px;color:var(--text-3);">In Progress</div>
             </div>
-            <div class="section-cta">
-                <a href="case-studies.html" class="btn-outline">View All Projects</a>
-            </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Graphic Designs Section -->
-    <section class="graphic-designs">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">My Designs</span>
-                <h2>Graphic Design Portfolio</h2>
-                <p>Explore my creative work in graphic design and branding</p>
-            </div>
-            <div class="flipbook-container">
-                <iframe src="https://heyzine.com/flip-book/fc47c013d1.html" frameborder="0" allowfullscreen loading="lazy"></iframe>
-            </div>
+      </div>
+      <div class="hero-image">
+        <div class="image-container">
+          <div class="image-ring"></div>
+          <img src="images/professional-headshot.jpeg" alt="Tinashe Andre" class="profile-img">
+          <div class="floating-elements">
+            <div class="floating-card card-1"><i class="fas fa-code"></i><span>Web Dev</span></div>
+            <div class="floating-card card-2"><i class="fas fa-network-wired"></i><span>CCNA</span></div>
+            <div class="floating-card card-3"><i class="fab fa-microsoft"></i><span>Azure</span></div>
+            <div class="floating-card card-4"><i class="fas fa-palette"></i><span>Design</span></div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section class="skills">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">What I Do</span>
-                <h2>My Expertise</h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>Building responsive, modern websites using the latest technologies and best practices.</p>
-                    <div class="skill-tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>React</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Mobile Development</h3>
-                    <p>Creating cross-platform mobile applications with React Native and native technologies.</p>
-                    <div class="skill-tags">
-                        <span>React Native</span>
-                        <span>Kotlin</span>
-                        <span>Java</span>
-                        <span>Python</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>UI/UX Design</h3>
-                    <p>Designing intuitive user interfaces and creating engaging user experiences.</p>
-                    <div class="skill-tags">
-                        <span>Figma</span>
-                        <span>Adobe</span>
-                        <span>Canva</span>
-                        <span>Prototyping</span>
-                    </div>
-                </div>
-            </div>
+  <!-- STATS -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-label">Projects Delivered</div>
         </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="num-plus"><div class="stat-number" data-target="10">0</div><span>+</span></div>
-                    <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="2">0</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-item">
-                    <div class="num-percent"><div class="stat-number" data-target="98">0</div><span>%</span></div>
-                    <div class="stat-label">Client Satisfaction</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="24">0</div>
-                    <div class="stat-label">Support Hours</div>
-                </div>
-            </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="2">0</span>
+          </div>
+          <div class="stat-label">Years Experience</div>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to work together?</h2>
-                <p>Let's create something amazing that will make your brand stand out.</p>
-                <div class="cta-actions">
-                    <a href="contact.html" class="btn-primary">Start a Project</a>
-                    <a href="mailto:tinashedre.dev@gmail.com" class="btn-outline">Send Email</a>
-                </div>
-            </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
+          </div>
+          <div class="stat-label">Client Satisfaction</div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="images/tdre-no-bg.png" alt="T.Dre Logo">
-                    <p>Building digital experiences that matter.</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Navigation</h4>
-                        <a href="index.html">Home</a>
-                        <a href="case-studies.html">Case Studies</a>
-                        <a href="about.html">About</a>
-                        <a href="contact.html">Contact</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Connect</h4>
-                        <a href="https://github.com/Tinashe-Andre" target="_blank">GitHub</a>
-                        <a href="https://www.linkedin.com/in/tinashe-makwiramiti-943939307" target="_blank">LinkedIn</a>
-                        <a href="https://www.tiktok.com/@tdre.dev" target="_blank">TikTok</a>
-                        <a href="mailto:tinashedre.dev@gmail.com">Email</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Tinashe Andre. All rights reserved.</p>
-            </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="24">0</span><span class="stat-suffix">/7</span>
+          </div>
+          <div class="stat-label">Support Available</div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            AOS.init({
-                duration: 800,
-                easing: "ease-in-out",
-                once: true,
-            });
-        });
-    </script>
+  <!-- SERVICES -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">What I Offer</span>
+        <h2>End-to-End Digital Solutions</h2>
+        <p>From pixel-perfect websites to enterprise network infrastructure — I cover the full stack.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Custom websites and web apps built from scratch. Fast, responsive, and optimised for conversion.</p>
+          <div class="service-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Node.js</span>
+          </div>
+        </div>
+        <div class="service-card highlight-amber" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon amber"><i class="fas fa-palette"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>User-centred interfaces designed in Figma. Branding, wireframes, and full design-to-dev handoff.</p>
+          <div class="service-tags">
+            <span>Figma</span><span>Adobe Suite</span><span>Canva</span><span>Prototyping</span>
+          </div>
+        </div>
+        <div class="service-card highlight-purple" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon purple"><i class="fas fa-network-wired"></i></div>
+          <h3>Network Engineering</h3>
+          <p>CCNA-certified network setup, configuration, and troubleshooting for businesses of any size.</p>
+          <div class="service-tags">
+            <span>Cisco IOS</span><span>TCP/IP</span><span>VLANs</span><span>Routing</span>
+          </div>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon"><i class="fab fa-microsoft"></i></div>
+          <h3>Cloud Solutions</h3>
+          <p>Azure cloud deployments, virtual machines, and scalable infrastructure for modern businesses.</p>
+          <div class="service-tags">
+            <span>Azure</span><span>VM</span><span>Storage</span><span>Security</span>
+          </div>
+        </div>
+        <div class="service-card highlight-amber" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon amber"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Mobile Development</h3>
+          <p>Cross-platform mobile apps with React Native and native Android development using Kotlin.</p>
+          <div class="service-tags">
+            <span>React Native</span><span>Kotlin</span><span>Firebase</span><span>Android</span>
+          </div>
+        </div>
+        <div class="service-card highlight-purple" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon purple"><i class="fas fa-headset"></i></div>
+          <h3>Ongoing Support</h3>
+          <p>24/7 maintenance, security updates, and technical support to keep your digital assets running.</p>
+          <div class="service-tags">
+            <span>Maintenance</span><span>Updates</span><span>Monitoring</span><span>Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section class="featured-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Featured Work</span>
+        <h2>Projects That Perform</h2>
+        <p>Real businesses, real results. Here's a selection of client work I'm proud of.</p>
+      </div>
+      <div class="projects-showcase">
+
+        <!-- P Squared -->
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-row-image">
+            <img src="images/psquared-project.png" alt="P Squared Cleaning Services">
+            <div class="project-row-image-overlay">
+              <a href="https://psquaredtotalcare.co.za/" target="_blank" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Site</a>
+              <a href="https://github.com/Tinashe-Andre/P-Squared-Website" target="_blank" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-row-body">
+            <div class="project-category">Cleaning Industry · 2024</div>
+            <h3>P Squared Cleaning Services</h3>
+            <p>A modern, conversion-focused website for a professional cleaning company. Built with SEO best practices, a streamlined contact flow, and mobile-first responsive design to drive leads.</p>
+            <div class="project-tech-row">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span>
+            </div>
+            <div class="project-links-row">
+              <a href="https://psquaredtotalcare.co.za/" target="_blank" class="btn-primary"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+              <a href="case-studies.html" class="btn-outline">Read Case Study</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Boomerang -->
+        <div class="project-row reverse" data-aos="fade-up">
+          <div class="project-row-image">
+            <img src="images/boomerang-project.png" alt="Boomerang Driving School">
+            <div class="project-row-image-overlay">
+              <a href="https://boomerangdrivingschool.co.za/" target="_blank" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Site</a>
+              <a href="https://github.com/Tinashe-Andre/Boomerang-Website" target="_blank" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-row-body">
+            <div class="project-category">Education · 2024</div>
+            <h3>Boomerang Driving School</h3>
+            <p>Interactive website complete with a custom lesson booking system and dynamic UI. Reduced manual admin with automated form handling and improved student conversion rates.</p>
+            <div class="project-tech-row">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Forms</span>
+            </div>
+            <div class="project-links-row">
+              <a href="https://boomerangdrivingschool.co.za/" target="_blank" class="btn-primary"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+              <a href="case-studies.html" class="btn-outline">Read Case Study</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Noxcool -->
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-row-image">
+            <img src="images/noxcool-project.png" alt="Noxcool Air Conditioning">
+            <div class="project-row-image-overlay">
+              <a href="https://noxcool-website.vercel.app/" target="_blank" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Site</a>
+              <a href="https://github.com/Tinashe-Andre/New-Villians-Web" target="_blank" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-row-body">
+            <div class="project-category">HVAC Industry · 2024</div>
+            <h3>Noxcool Air Conditioning</h3>
+            <p>Professional business website establishing credibility and trust for an HVAC services company. Clear service showcase, testimonials, and a lead-generating contact system.</p>
+            <div class="project-tech-row">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Vercel</span>
+            </div>
+            <div class="project-links-row">
+              <a href="https://noxcool-website.vercel.app/" target="_blank" class="btn-primary"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+              <a href="case-studies.html" class="btn-outline">Read Case Study</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div style="text-align:center;margin-top:48px;">
+        <a href="case-studies.html" class="btn-outline">View All Projects <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE TEASER -->
+  <section class="quote-teaser">
+    <div class="container">
+      <div class="quote-teaser-inner">
+        <div class="quote-teaser-text" data-aos="fade-right">
+          <span class="section-badge">Transparent Pricing</span>
+          <h2>Ready to launch your next project?</h2>
+          <p>I work with businesses of all sizes — from startups needing their first website to established companies requiring a full digital overhaul. Every quote is custom and obligation-free.</p>
+          <a href="quote.html" class="btn-amber" style="margin-top:8px;"><i class="fas fa-file-invoice-dollar"></i> Request a Free Quote</a>
+        </div>
+        <div class="pricing-cards" data-aos="fade-left">
+          <div class="pricing-card">
+            <div class="pricing-info">
+              <h4>Starter Website</h4>
+              <p>5 pages, contact form, mobile-ready</p>
+            </div>
+            <div class="pricing-price">
+              <div class="from">From</div>
+              <div class="amount">R2,500</div>
+            </div>
+          </div>
+          <div class="pricing-card featured-price">
+            <div class="pricing-info">
+              <h4>Business Website</h4>
+              <p>Custom design, CMS, booking system</p>
+            </div>
+            <div class="pricing-price">
+              <div class="from">From</div>
+              <div class="amount">R6,500</div>
+            </div>
+          </div>
+          <div class="pricing-card">
+            <div class="pricing-info">
+              <h4>E-commerce / Web App</h4>
+              <p>Full-stack, payments, admin dashboard</p>
+            </div>
+            <div class="pricing-price">
+              <div class="from">From</div>
+              <div class="amount">R15,000</div>
+            </div>
+          </div>
+          <div class="pricing-card">
+            <div class="pricing-info">
+              <h4>Network Setup</h4>
+              <p>CCNA-grade config, VLAN, routing</p>
+            </div>
+            <div class="pricing-price">
+              <div class="from">From</div>
+              <div class="amount">R3,500</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRAPHIC DESIGNS -->
+  <section class="designs-home">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Creative Work</span>
+        <h2>Graphic Design Portfolio</h2>
+        <p>Beyond code — branding, print, and digital design that communicates clearly and memorably.</p>
+      </div>
+      <div class="flipbook-container" data-aos="zoom-in">
+        <iframe src="https://heyzine.com/flip-book/fc47c013d1.html" frameborder="0" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Let's build something remarkable.</h2>
+        <p>Whether it's a website, network, or cloud solution — I deliver work that makes an impact.</p>
+        <div class="cta-actions">
+          <a href="quote.html" class="btn-primary"><i class="fas fa-file-invoice-dollar"></i> Get a Free Quote</a>
+          <a href="contact.html" class="btn-outline">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="images/tdre-no-bg.png" alt="T.Dre Logo">
+          <p>Building digital experiences that convert, connect, and last.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Pages</h4>
+            <a href="index.html">Home</a>
+            <a href="case-studies.html">Work</a>
+            <a href="networking.html">Networking</a>
+            <a href="cloud.html">Cloud</a>
+            <a href="about.html">About</a>
+            <a href="quote.html">Get a Quote</a>
+          </div>
+          <div class="footer-column">
+            <h4>Connect</h4>
+            <a href="https://github.com/Tinashe-Andre" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/tinashe-makwiramiti-943939307" target="_blank">LinkedIn</a>
+            <a href="https://www.tiktok.com/@tdre.dev" target="_blank">TikTok</a>
+            <a href="mailto:tinashedre.dev@gmail.com">Email</a>
+            <a href="tel:+27736118217">+27 73 611 8217</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Tinashe Andre. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/Tinashe-Andre" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/tinashe-makwiramiti-943939307" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.tiktok.com/@tdre.dev" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="mailto:tinashedre.dev@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
